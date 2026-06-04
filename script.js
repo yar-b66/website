@@ -5,7 +5,7 @@
 // Contact Form API Configuration
 const CONTACT_CONFIG = {
     // Backend API (FastAPI server)
-    backendEndpoint: "http://localhost:8000/api/send-message", // Update this to your deployed backend URL in production
+    backendEndpoint: "https://website-3pj3.onrender.com/", // Update this to your deployed backend URL in production
 
     // Background Email API (Formspree)
     emailEndpoint: "https://formspree.io/f/yaredb680@gmail.com"
