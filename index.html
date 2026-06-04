@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yared Bekele's Professional Portfolio. Software Developer, Linguistic Data Specialist, and Content Creator based in Addis Ababa, Ethiopia.">
+    <meta name="keywords" content="Yared Bekele, Software Developer, Amharic Translation, Oromo Translation, AI Language Training, Addis Ababa, Python Telegram Bot">
+    <meta name="author" content="Yared Bekele">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Yared Bekele | Multidisciplinary Professional">
+    <meta property="og:description" content="Software Developer, Linguistic Data Specialist, and Content Creator bridging technology and AI.">
+    <meta property="og:image" content="profile_avatar.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Yared Bekele | Multidisciplinary Professional">
+    <meta property="twitter:description" content="Software Developer, Linguistic Data Specialist, and Content Creator bridging technology and AI.">
+    <meta property="twitter:image" content="profile_avatar.png">
+
+    <title>Yared Bekele | Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Ambient Canvas Background -->
+    <canvas id="ambient-canvas"></canvas>
+
+    <!-- Header / Navigation -->
+    <header id="main-header">
+        <div class="container header-container">
+            <a href="#" class="logo" id="logo-link">
+                <span class="logo-accent">&lt;</span>YB<span class="logo-accent"> /&gt;</span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="#" class="nav-link active" id="nav-home" data-translate="nav-home">Home</a></li>
+                    <li><a href="#about" class="nav-link" id="nav-about" data-translate="nav-about">About</a></li>
+                    <li><a href="#skills" class="nav-link" id="nav-skills" data-translate="nav-skills">Skills</a></li>
+                    <li><a href="#projects" class="nav-link" id="nav-projects" data-translate="nav-projects">Projects</a></li>
+                    <li><a href="#contact" class="nav-link" id="nav-contact" data-translate="nav-contact">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <!-- Theme Cycle Button -->
+                <button class="theme-cycle-btn" id="theme-cycle-btn" aria-label="Cycle UI Themes">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="theme-sun-icon"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                </button>
+
+                <!-- Language Toggle Switcher -->
+                <div class="lang-switcher" id="lang-switcher">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="am">አማ</button>
+                    <button class="lang-btn" data-lang="om">ORM</button>
+                </div>
+
+                <a href="#contact" class="btn btn-sm btn-outline header-cta" id="header-connect-btn" data-translate="nav-connect">Connect</a>
+                <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle navigation menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="location-badge" id="hero-location">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="location-icon"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <span data-translate="hero-location">Addis Ababa, Ethiopia</span>
+                    </div>
+                    
+                    <h1 class="hero-title" id="hero-heading">
+                        <span data-translate="hero-title-greeting">Hi, I'm</span> <span class="text-gradient">Yared Bekele</span>
+                    </h1>
+                    
+                    <div class="typing-container">
+                        <span class="typed-text" id="typed-text"></span><span class="cursor" id="typed-cursor">&nbsp;</span>
+                    </div>
+                    
+                    <p class="hero-subtitle" id="hero-subheading" data-translate="hero-subheading">
+                        Bridging the gap between technology and artificial intelligence. 
+                    </p>
+                    
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary" id="hero-cta-work">
+                            <span data-translate="hero-cta-work">View My Work</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </a>
+                        <a href="#contact" class="btn btn-outline" id="hero-cta-contact" data-translate="hero-cta-contact">Get in Touch</a>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="#about" class="scroll-indicator" id="scroll-arrow" aria-label="Scroll to About Section">
+                <span class="mouse-icon">
+                    <span class="mouse-wheel"></span>
+                </span>
+                <span class="arrow-down"></span>
+            </a>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="about-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tagline" data-translate="about-tagline">Background</span>
+                    <h2 class="section-title" id="about-title" data-translate="about-title">About Me</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="about-grid">
+                    <div class="about-visual">
+                        <div class="avatar-frame">
+                            <div class="glow-bg"></div>
+                            <img src="profile_avatar.png" alt="Yared Bekele - Multidisciplinary Professional" class="profile-img" id="about-avatar-img">
+                            <div class="frame-border"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-info">
+                        <h3 class="about-subtitle" id="about-info-heading" data-translate="about-subtitle">Merging Automation &amp; Language Technology</h3>
+                        <p class="about-text" id="about-bio-p1" data-translate="about-bio-p1">
+                            I am a multidisciplinary professional with a Bachelor of Science in Electrical and Computer Engineering from Mizan Tepi University (Class of 2021). I thrive at the intersection of automation and language technology.
+                        </p>
+                        <p class="about-text" id="about-bio-p2" data-translate="about-bio-p2">
+                            Whether I am building Python-based automation bots or training AI language models, I bring a highly analytical and technical approach to everything I do. My diverse experiences allow me to solve complex, cross-functional problems in unique and efficient ways.
+                        </p>
+                        
+                        <div class="stats-grid">
+                            <div class="stat-card" id="stat-ece">
+                                <div class="stat-icon-wrap" style="--accent-color: var(--color-software);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/></svg>
+                                </div>
+                                <div class="stat-num" data-translate="stat-ece-num">B.Sc.</div>
+                                <div class="stat-label" data-translate="stat-ece-label">Electrical &amp; Computer Eng.</div>
+                            </div>
+                            <div class="stat-card" id="stat-lang">
+                                <div class="stat-icon-wrap" style="--accent-color: var(--color-linguistics);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                                </div>
+                                <div class="stat-num" data-translate="stat-lang-num">Amharic &amp; Oromo</div>
+                                <div class="stat-label" data-translate="stat-lang-label">Native Linguistic Specialist</div>
+                            </div>
+                            <div class="stat-card" id="stat-ai">
+                                <div class="stat-icon-wrap" style="--accent-color: var(--color-media);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 0 1 7.54 16.59c-.44.5-.32 1.25.24 1.63A2 2 0 0 1 19 22H5a2 2 0 0 1-1.3-3.78c.56-.38.68-1.13.24-1.63A10 10 0 0 1 12 2Z"/></svg>
+                                </div>
+                                <div class="stat-num" data-translate="stat-ai-num">AI Training</div>
+                                <div class="stat-label" data-translate="stat-ai-label">Google AI Studio, Micro1</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills & Expertise Section -->
+        <section id="skills" class="skills-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tagline" data-translate="skills-tagline">My Abilities</span>
+                    <h2 class="section-title" id="skills-title" data-translate="skills-title">Skills &amp; Expertise</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <!-- Filters -->
+                <div class="filter-container">
+                    <button class="filter-btn active" data-filter="all" id="filter-all" data-translate="filter-all">All Skills</button>
+                    <button class="filter-btn" data-filter="software" id="filter-software" data-translate="filter-software">Software &amp; Automation</button>
+                    <button class="filter-btn" data-filter="linguistics" id="filter-linguistics" data-translate="filter-linguistics">Linguistics &amp; AI Data</button>
+                    <button class="filter-btn" data-filter="media" id="filter-media" data-translate="filter-media">Digital Media &amp; AI</button>
+                </div>
+
+                <!-- Skills Grid -->
+                <div class="skills-grid" id="skills-grid">
+                    
+                    <!-- Software Engineering & Automation -->
+                    <div class="skill-card" data-category="software" id="skill-python">
+                        <div class="skill-head">
+                            <div class="skill-icon-box" style="--theme-color: var(--color-software);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                            </div>
+                            <span class="skill-category-tag software">Software</span>
+                        </div>
+                        <h4 class="skill-name">Python Development</h4>
+                        <p class="skill-desc">Writing clean, modular, and asynchronous Python scripts to automate tasks and build integrations.</p>
+                    </div>
+
+                    <div class="skill-card" data-category="software" id="skill-telegram">
+                        <div class="skill-head">
+                            <div class="skill-icon-box" style="--theme-color: var(--color-software);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                            </div>
+                            <span class="skill-category-tag software">Software</span>
+                        </div>
+                        <h4 class="skill-name">Telegram Bot Development</h4>
+                        <p class="skill-desc">Creating conversational bots, automated custom notifications, and interactive system managers using Telegram APIs.</p>
+                    </div>
+
+                    <div class="skill-card" data-category="software" id="skill-cloud">
+                        <div class="skill-head">
+                            <div class="skill-icon-box" style="--theme-color: var(--color-software);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19A3.5 3.5 0 0 0 21 15.5c0-2.79-2.54-4.5-5-4.5-.48 0-.96.06-1.4.17A6 6 0 0 0 5 14c0 2.2 1.8 4 4 4h8.5Z"/></svg>
+                            </div>
+                            <span class="skill-category-tag software">Software</span>
+                        </div>
+                        <h4 class="skill-name">Cloud Deployment (Render)</h4>
+                        <p class="skill-desc">Deploying web services, backends, cron tasks, and background processes seamlessly with Render cloud architecture.</p>
+                    </div>
+
+                    <div class="skill-card" data-category="software" id="skill-monitoring">
+                        <div class="skill-head">
+                            <div class="skill-icon-box" style="--theme-color: var(--color-software);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                            </div>
+                            <span class="skill-category-tag software">Software</span>
+                        </div>
+                        <h4 class="skill-name">Monitoring (UptimeRobot)</h4>
+                        <p class="skill-desc">Configuring active status monitoring, alerting pipelines, and logs monitoring to keep automation processes online 24/7.</p>
+                    </div>
+
+
+
+                    <!-- Linguistics & AI Data -->
+                    <div class="skill-card" data-category="linguistics" id="skill-translation">
+                        <div class="skill-head">
+                            <div class="skill-icon-box" style="--theme-color: var(--color-linguistics);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 8 6 6M4 14l6-6M2 5h12M7 2h1M22 22l-5-10-5 10M14 18h6"/></svg>
+                            </div>
+                            <span class="skill-category-tag linguistics">Linguistics</span>
+                        </div>
+                        <h4 class="skill-name">Amharic &amp; Oromo Translation</h4>
+                        <p class="skill-desc">Native bilingual capabilities, providing accurate localization, translation, and high-fidelity speech-to-text transcriptions.</p>
+                    </div>
+
+                    <div class="skill-card" data-category="linguistics" id="skill-ai-data">
+                        <div class="skill-head">
+                            <div class="skill-icon-box" style="--theme-color: var(--color-linguistics);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                            </div>
+                            <span class="skill-category-tag linguistics">Linguistics</span>
+                        </div>
+                        <h4 class="skill-name">AI Linguistic Model Training</h4>
+                        <p class="skill-desc">Screening and evaluating language datasets for global crowdsourcing platforms like Micro1, Sigma Group, and Clickworker.</p>
+                    </div>
+
+                    <!-- Digital Media & AI -->
+                    <div class="skill-card" data-category="media" id="skill-video-edit">
+                        <div class="skill-head">
+                            <div class="skill-icon-box" style="--theme-color: var(--color-media);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+                            </div>
+                            <span class="skill-category-tag media">Digital Media</span>
+                        </div>
+                        <h4 class="skill-name">Video Editing &amp; CapCut</h4>
+                        <p class="skill-desc">Editing engaging vertical and landscape video contents, inserting precise transitions, keyframing, and sync audio.</p>
+                    </div>
+
+                    <div class="skill-card" data-category="media" id="skill-prompt-eng">
+                        <div class="skill-head">
+                            <div class="skill-icon-box" style="--theme-color: var(--color-media);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/></svg>
+                            </div>
+                            <span class="skill-category-tag media">Digital Media</span>
+                        </div>
+                        <h4 class="skill-name">AI Prompt Engineering</h4>
+                        <p class="skill-desc">Harnessing cutting-edge AI models (Google AI Studio, Grok) to generate optimized copy, scripts, and automation assets.</p>
+                    </div>
+
+                    <div class="skill-card" data-category="media" id="skill-photo-edit">
+                        <div class="skill-head">
+                            <div class="skill-icon-box" style="--theme-color: var(--color-media);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                            </div>
+                            <span class="skill-category-tag media">Digital Media</span>
+                        </div>
+                        <h4 class="skill-name">Photo Retouching &amp; Color</h4>
+                        <p class="skill-desc">Adjusting exposure values, calibrating color grading, and enhancing visual components for professional-grade photography.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tagline" data-translate="projects-tagline">My Creations</span>
+                    <h2 class="section-title" id="projects-title" data-translate="projects-title">Featured Projects</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="projects-grid">
+                    
+                    <!-- Project 1 -->
+                    <div class="project-card" data-project-id="it-bot" id="project-card-bot">
+                        <div class="project-media-placeholder" style="--gradient-from: #00f0ff; --gradient-to: #0072ff;">
+                            <div class="project-visual-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M12 2v9"/><path d="M8 5h8"/></svg>
+                            </div>
+                            <span class="project-badge">Software</span>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-card-title">IT Support Desk Bot</h3>
+                            <p class="project-card-excerpt">A custom Python-based Telegram automation bot deployed for a customs industrial park. It manages files and organizes directives efficiently.</p>
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>Telegram API</span>
+                                <span>Render</span>
+                                <span>Automation</span>
+                            </div>
+                            <button class="btn btn-sm btn-outline project-btn" data-project="it-bot" data-translate="project-learn-more">Learn More</button>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card" data-project-id="ai-training" id="project-card-linguistics">
+                        <div class="project-media-placeholder" style="--gradient-from: #a855f7; --gradient-to: #6366f1;">
+                            <div class="project-visual-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg>
+                            </div>
+                            <span class="project-badge">AI &amp; Linguistics</span>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-card-title">AI Language Training</h3>
+                            <p class="project-card-excerpt">Technical linguistic screening, data annotation, and native evaluation in Amharic and Oromo to improve remote conversational AI models.</p>
+                            <div class="project-tags">
+                                <span>Amharic</span>
+                                <span>Oromo</span>
+                                <span>AI Training</span>
+                                <span>Data Annotation</span>
+                            </div>
+                            <button class="btn btn-sm btn-outline project-btn" data-project="ai-training" data-translate="project-learn-more">Learn More</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- AI Media Before/After Slider Component -->
+                <div class="slider-wrapper">
+                    <h3 class="slider-title" data-translate="slider-title">AI Photo Enhancement Showcase</h3>
+                    <p class="slider-subtitle" data-translate="slider-subtitle">Drag the handle to view the raw camera asset versus the final studio color-corrected AI output.</p>
+                    
+                    <div class="before-after-container" id="before-after-slider">
+                        <!-- Before (Raw Image) -->
+                        <div class="img-container raw-img">
+                            <img src="profile_avatar.png" alt="Raw Image" id="slider-img-raw">
+                            <span class="img-badge before-badge" data-translate="badge-before">Raw Asset</span>
+                        </div>
+                        
+                        <!-- After (Enhanced Image) -->
+                        <div class="img-container enhanced-img" id="enhanced-img-wrapper">
+                            <img src="profile_avatar.png" alt="Enhanced Image" id="slider-img-enhanced">
+                            <span class="img-badge after-badge" data-translate="badge-after">AI Color Enhanced</span>
+                        </div>
+                        
+                        <!-- Drag Handle -->
+                        <div class="slider-handle" id="slider-handle">
+                            <div class="handle-arrow-left"></div>
+                            <div class="handle-line"></div>
+                            <div class="handle-arrow-right"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Prompts display area -->
+                    <div class="prompt-display-card">
+                        <div class="prompt-card-header">
+                            <span class="prompt-icon">💡</span>
+                            <span class="prompt-label" data-translate="prompt-label">Engineered AI Retouch Prompt</span>
+                        </div>
+                        <div class="prompt-card-body">
+                            <code class="prompt-text">"studio-grade cinematic lighting, high-contrast digital professional portrait, vibrant color calibration, micro circuit detail overlays, neural depth of field, 8k resolution"</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tagline" data-translate="contact-tagline">Get In Touch</span>
+                    <h2 class="section-title" id="contact-title" data-translate="contact-title">Contact Me</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-details">
+                        <h3 class="contact-subtitle" id="contact-heading" data-translate="contact-heading">Let's Connect!</h3>
+                        <p class="contact-text" id="contact-subtext" data-translate="contact-subtext">
+                            I am always open to discussing tech projects or linguistic data opportunities. Whether you want to hire me, collaborate, or just talk shop, drop me a message!
+                        </p>
+                        
+                        <div class="contact-cards">
+                            <a href="mailto:yaredb680@gmail.com" class="contact-detail-card" id="contact-email-card">
+                                <div class="detail-icon" style="--accent-color: #3b82f6;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+                                </div>
+                                <div class="detail-info">
+                                    <span class="detail-label" data-translate="detail-email-label">Email Me</span>
+                                    <span class="detail-value">yaredb680@gmail.com</span>
+                                </div>
+                            </a>
+
+                            <a href="tel:+251986435551" class="contact-detail-card" id="contact-phone-card">
+                                <div class="detail-icon" style="--accent-color: #10b981;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                </div>
+                                <div class="detail-info">
+                                    <span class="detail-label" data-translate="detail-phone-label">Call / Telegram</span>
+                                    <span class="detail-value">+251 98 643 5551</span>
+                                </div>
+                            </a>
+
+                            <a href="https://t.me/yared_b" target="_blank" rel="noopener noreferrer" class="contact-detail-card" id="contact-tg-card">
+                                <div class="detail-icon" style="--accent-color: #0088cc;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                                </div>
+                                <div class="detail-info">
+                                    <span class="detail-label" data-translate="detail-tg-label">Telegram Username</span>
+                                    <span class="detail-value">@yared_b</span>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        <div class="social-networks-wrap">
+                            <span class="social-label" data-translate="social-label">Find Me Online</span>
+                            <div class="social-links-row">
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-circle-link" id="github-link" aria-label="GitHub Profile">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                                </a>
+                                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-circle-link" id="linkedin-link" aria-label="LinkedIn Profile">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Telegram Bot Contact Interface -->
+                    <div class="telegram-chat-wrap">
+                        <div class="telegram-chat-header">
+                            <div class="telegram-bot-avatar">🤖</div>
+                            <div class="telegram-bot-info">
+                                <span class="telegram-bot-name">Yared's Assistant Bot</span>
+                                <span class="telegram-bot-status" data-translate="bot-status">bot • online</span>
+                            </div>
+                            <div class="telegram-header-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+                            </div>
+                        </div>
+                        
+                        <div class="telegram-chat-messages" id="telegram-chat-messages">
+                            <!-- Simulated messages will be dynamically appended here by JS -->
+                            <div class="telegram-message bot-msg">
+                                <div class="message-bubble" data-translate="bot-msg-welcome">
+                                    Hello! Welcome to Yared Bekele's portfolio bot. How can I help you today? Please choose an option below.
+                                </div>
+                                <span class="message-time">12:00 PM</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Interactive menu presets -->
+                        <div class="telegram-chat-presets" id="telegram-chat-presets">
+                            <button class="preset-btn" data-intent="tech" data-translate="preset-tech">Discuss a Tech Project</button>
+                            <button class="preset-btn" data-intent="forex" data-translate="preset-forex">Talk Forex</button>
+                            <button class="preset-btn" data-intent="linguistics" data-translate="preset-linguistics">Linguistic Services</button>
+                        </div>
+                        
+                        <!-- Chat Input Box (disabled until workflow starts) -->
+                        <form id="telegram-chat-form" class="telegram-chat-input-bar">
+                            <input type="text" id="telegram-chat-input" placeholder="Select an option above..." disabled autocomplete="off">
+                            <button type="submit" id="telegram-chat-send" class="chat-send-btn" disabled aria-label="Send message">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="send-arrow"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <a href="#" class="logo footer-logo">
+                <span class="logo-accent">&lt;</span>YB<span class="logo-accent"> /&gt;</span>
+            </a>
+            <p class="copyright">
+                &copy; <span id="current-year">2026</span> Yared Bekele. <span data-translate="footer-based">Based in Addis Ababa, Ethiopia</span> 
+                <span class="coffee-egg-container">
+                    <span class="coffee-icon" id="coffee-cup-icon">☕</span>
+                    <span class="coffee-tooltip">Powered by Python, AI, and strong local coffee.</span>
+                </span>
+            </p>
+            <div class="footer-socials">
+                <a href="mailto:yaredb680@gmail.com" aria-label="Email"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg></a>
+                <a href="https://t.me/yared_b" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg></a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Details Modal Backdrop & Container -->
+    <div class="modal-overlay" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-content">
+            <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">&times;</button>
+            <div class="modal-body-wrap" id="modal-body-content">
+                <!-- Dynamically injected project content goes here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Status Toast Notification -->
+    <div class="toast-notification" id="toast-notify">
+        <div class="toast-icon" id="toast-icon">
+            <!-- SVG icon injected by JS -->
+        </div>
+        <div class="toast-content">
+            <span class="toast-title" id="toast-title">Success</span>
+            <span class="toast-msg" id="toast-msg">Your message has been sent successfully.</span>
+        </div>
+    </div>
+
+    <!-- JS Script -->
+    <script src="script.js"></script>
+</body>
+</html>
